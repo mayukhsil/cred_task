@@ -98,17 +98,17 @@ class EMISelectionCard extends ConsumerWidget {
                               children: [
                                 Flexible(
                                   child: Container(
-                                    height: 40.h,
-                                    width: 40.w,
+                                    height: 35.h,
+                                    width: 35.w,
                                     decoration: BoxDecoration(
                                       shape: BoxShape.circle,
                                       border: Border.all(
                                         color: AppColor.appWhite,
-                                        width: 2.w,
+                                        width: 0.5.w,
                                       ),
                                     ),
                                     child: landingPageChangeNotifierProvider.currentEMICardIndex == index?
-                                    Icon(Icons.check,color: AppColor.appWhite,size: 30.sp,):Container(),
+                                    Icon(Icons.check,color: AppColor.appIceGrey,size: 20.sp,):Container(),
                                   ),
                                 ),
                                 Flexible(child: SizedBox(height: 10.h,)),
