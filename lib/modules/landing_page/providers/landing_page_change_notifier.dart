@@ -163,8 +163,8 @@ class LandingPageChangeNotifier with ChangeNotifier {
     _currentCardIndex = 0;
     _currentEMICardIndex = 1;
     _selectedBank = '';
-    _selectedTenurePeriod = 0;
-    _selectedTenureMonthlyAmount = 0;
+    _selectedTenurePeriod = 6;
+    _selectedTenureMonthlyAmount;
     _selectedBankCardIndex = 0;
   }
 

@@ -68,14 +68,12 @@ class AmountSelectionSliderCard extends ConsumerWidget {
                     style: AppTextStyles.s12(fontType: FontType.MEDIUM,color: AppColor.appIceGrey),
                   )),
                   Flexible(child: SizedBox(height: 20.h,)),
-                  Visibility(
-                    visible: landingPageChangeNotifierProvider.zoneOneExtended,
-                    child: Flexible(
-                      flex: 4,
+                  Flexible(
+                    flex: 4,
+                    child: Visibility(
+                      visible: landingPageChangeNotifierProvider.zoneOneExtended,
                       child: Center(
                         child: Container(
-                          height: 300.h,
-                          width: 280.w,
                           decoration: BoxDecoration(
                             color: AppColor.appWhite,
                             borderRadius: BorderRadius.circular(15.sp),
@@ -83,9 +81,12 @@ class AmountSelectionSliderCard extends ConsumerWidget {
                           child: Padding(
                             padding: EdgeInsets.all(20.sp),
                             child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisSize: MainAxisSize.max,
                               children: [
                                 Flexible(
-                                  flex: 10,
+                                  flex: 6,
                                   child: SleekCircularSlider(
                                     initialValue: landingPageChangeNotifierProvider.selectedAmount,
                                     min: 0,
@@ -96,7 +97,7 @@ class AmountSelectionSliderCard extends ConsumerWidget {
                                         shadowColor: AppColor.appIceGrey,
                                         trackColor: AppColor.appIceGrey,
                                       ),
-                                      size: 290.sp,
+                                      size: 220.sp,
                                       infoProperties: InfoProperties(
                                         mainLabelStyle: AppTextStyles.s18(fontType: FontType.REGULAR
                                             ,color: AppColor.appDarkGrey),
@@ -119,7 +120,7 @@ class AmountSelectionSliderCard extends ConsumerWidget {
                             ),
                           ),
                         ),
-                      )
+                      ),
                     ),
                   )
                 ],
