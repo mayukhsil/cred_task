@@ -96,7 +96,7 @@ class AmountSelectionSliderCard extends ConsumerWidget {
                                         shadowColor: AppColor.appIceGrey,
                                         trackColor: AppColor.appIceGrey,
                                       ),
-                                      size: 300.sp,
+                                      size: 290.sp,
                                       infoProperties: InfoProperties(
                                         mainLabelStyle: AppTextStyles.s18(fontType: FontType.REGULAR
                                             ,color: AppColor.appDarkGrey),
