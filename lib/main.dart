@@ -13,8 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQueryData.fromWindow(WidgetsBinding.instance.window);
+    // initializing Riverpod with ProviderScope
     return ProviderScope(
-      child: ScreenUtilInit(
+      //initializing screenUtil with values from MediaQuery
+    child: ScreenUtilInit(
         designSize: Size(size.size.width, size.size.height),
         minTextAdapt: true,
         builder: (_, __) {

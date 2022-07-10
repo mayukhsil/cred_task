@@ -15,6 +15,8 @@ class LandingPageView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    //injecting LandingPageProvider into LandingPageView
+    //observing change and state notifiers
     var landingPageChangeNotifierProvider = ref.watch(landingPageChangeNotifier);
     var state = ref.watch(landingPageStateNotifier);
     return state.when(
@@ -30,6 +32,7 @@ class LandingPageView extends ConsumerWidget {
               IconButton(
                 icon: Icon(Icons.cancel_rounded,color: AppColor.appIceGrey,size: 18.sp,),
                 onPressed: (){
+                  //changing toggle states for all the zones to exit from the card stack view
                   landingPageChangeNotifierProvider.toggleZoneExtension(1,false);
                   landingPageChangeNotifierProvider.toggleZoneExtension(2,false);
                   landingPageChangeNotifierProvider.toggleZoneExtension(3,false);
@@ -49,24 +52,32 @@ class LandingPageView extends ConsumerWidget {
                     const BankSelectionCard(),
                     InkWell(
                       onTap: (){
+                        //using toggleZoneExtension to change the state of the zone
+                        //using toggleZoneSuspension to change the state of the zone
+
+                        //using currentCardIndex to change the state of the card
                         if(landingPageChangeNotifierProvider.currentCardIndex == 0){
                           landingPageChangeNotifierProvider.toggleZoneExtension(1,true);
                           landingPageChangeNotifierProvider.updateCurrentCardIndex(1);
                           return;
                         }
+
                         if(landingPageChangeNotifierProvider.currentCardIndex == 1){
                           landingPageChangeNotifierProvider.toggleZoneExtension(2,true);
                           landingPageChangeNotifierProvider.toggleZoneSuspension(1,true);
                           landingPageChangeNotifierProvider.updateCurrentCardIndex(2);
                           return;
                         }
+
                         if(landingPageChangeNotifierProvider.currentCardIndex == 2){
                           landingPageChangeNotifierProvider.toggleZoneExtension(3,true);
                           landingPageChangeNotifierProvider.toggleZoneSuspension(2,true);
                           landingPageChangeNotifierProvider.updateCurrentCardIndex(3);
                           return;
                         }
+
                         if(landingPageChangeNotifierProvider.currentCardIndex == 3){
+                          //changing toggle states for all the zones to exit from the card stack view
                           landingPageChangeNotifierProvider.toggleZoneExtension(1,false);
                           landingPageChangeNotifierProvider.toggleZoneExtension(2,false);
                           landingPageChangeNotifierProvider.toggleZoneExtension(3,false);

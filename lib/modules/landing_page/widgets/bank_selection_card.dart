@@ -14,7 +14,7 @@ class BankSelectionCard extends ConsumerWidget {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 500),
       height: landingPageChangeNotifierProvider.zoneThreeExtended ?
-      landingPageChangeNotifierProvider.zoneThreeSuspended ? 400.h: 440.h : 0.h,
+      landingPageChangeNotifierProvider.zoneThreeSuspended ? 400.h: 450.h : 0.h,
       child: Container(
         height: MediaQuery.of(context).size.height / 1.4,
         width: double.infinity,
@@ -31,10 +31,10 @@ class BankSelectionCard extends ConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Flexible(child: Text('Selected bank',
-                    style: AppTextStyles.s14(fontType: FontType.MEDIUM,color: AppColor.appDarkGrey),
+                    style: AppTextStyles.s12(fontType: FontType.MEDIUM,color: AppColor.appDarkGrey),
                   )),
-                  Flexible(child: Text('IDFC Bank',
-                    style: AppTextStyles.s14(fontType: FontType.MEDIUM,color: AppColor.appDarkGrey),
+                  Flexible(child: Text(landingPageChangeNotifierProvider.selectedBank,
+                    style: AppTextStyles.s16(fontType: FontType.MEDIUM,color: AppColor.appDarkGrey),
                   )),
                 ],
               ),
