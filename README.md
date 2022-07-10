@@ -4,18 +4,16 @@ A fun task by CRED.
 
 ## Folder Structure
 
-[]: # Architecture: MVVM
-
 The folders were made with regards to having a scalable and maintainable architecture.
 
--android/ - Contains the Android project.
--assets/ - Contains the assets.
--fonts/ - Contains the fonts.
--ios/ - Contains the iOS project.
--lib/ - Contains the Flutter project.
--test/ - Contains the Dart tests.
--pubspec.yaml - Project's pubspec.yaml.
--README.md - Project's README.md.
+- android/ - Contains the Android project.
+- assets/ - Contains the assets.
+- fonts/ - Contains the fonts.
+- ios/ - Contains the iOS project.
+- lib/ - Contains the Flutter project.
+- test/ - Contains the Dart tests.
+- pubspec.yaml - Project's pubspec.yaml.
+- README.md - Project's README.md.
 
 lib is further divided into
 -lib/generated/ - Contains the generated files.
