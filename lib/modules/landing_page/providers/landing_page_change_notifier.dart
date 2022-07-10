@@ -161,7 +161,7 @@ class LandingPageChangeNotifier with ChangeNotifier {
     _zoneTwoSuspended = false;
     _zoneThreeSuspended = false;
     _currentCardIndex = 0;
-    _currentEMICardIndex = 0;
+    _currentEMICardIndex = 1;
     _selectedBank = '';
     _selectedTenurePeriod = 0;
     _selectedTenureMonthlyAmount = 0;

@@ -10,6 +10,7 @@ class EMISelectionCard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    //injecting LandingPageProvider
     var landingPageChangeNotifierProvider = ref.watch(landingPageChangeNotifier);
     return AnimatedContainer(
       duration: const Duration(milliseconds: 500),
@@ -20,6 +21,10 @@ class EMISelectionCard extends ConsumerWidget {
         width: double.infinity,
         decoration: const BoxDecoration(
           color: AppColor.appDarkGrey,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(15),
+            topRight: Radius.circular(15),
+          ),
         ),
         child: Padding(
           padding: EdgeInsets.all(20.sp),
