@@ -16,9 +16,9 @@ The folders were made with regards to having a scalable and maintainable archite
 - README.md - Project's README.md.
 
 lib is further divided into
--lib/generated/ - Contains the generated files.
--lib/modules/ - Contains the modules divided on the basis of pages.
--lib/styles/ - Contains the styling elements of the Project.
+- lib/generated/ - Contains the generated files.
+- lib/modules/ - Contains the modules divided on the basis of pages.
+- lib/styles/ - Contains the styling elements of the Project.
 
 ## Methodology
 
